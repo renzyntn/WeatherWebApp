@@ -6,8 +6,63 @@
     <link href="style.css" rel="stylesheet">
     <title>Weather App</title>
 </head>
-<body class="bg-green-400">
-    <span class="text-black font-bold text-[48px] flex h-screen justify-center items-center">Heya!</span>
+<body class="bg-dark">
+    <div class="mx-[24px] sm:mx-auto flex h-screen justify-center items-center">
+        <div class="flex flex-col w-[350px] h-[600px] bg-white rounded-[24px] justify-center py-[30px] px-[25px] gap-[15px] font-instrument-sans">
+            <header class="w-full h-[40px] flex items-center gap-[10px]">
+                <div class="w-[220px] h-full flex justify-center items-center border border-dark rounded-[18px]">
+                    <input id="input-el" type="text" class="w-full p-[8px] outline-none text-start text-[16px] text-font-dark font-medium">
+                </div>
+
+                <button id="btnsearch-el" class="w-[70px] h-[30px] flex justify-center items-center rounded-[18px] bg-dark cursor-pointer active:scale-90 transform duration-150 ease-in-out">
+                    <p class="text-white text-[12px] font-light">Search</p>
+                </button>
+            </header>
+
+            <main class="flex flex-col w-full h-[380px] items-center">
+                <div class="w-full h-full flex flex-col justify-center items-center gap-[18px]">
+                    <div class="w-full h-[30px] flex justify-center items-center gap-[4px]">
+                        <img src="assets/icons/icon-location.svg" alt="Location Icon" class="w-[24px] h-[24px]">
+                        <p id="location-el" class="text-[24px] text-font-dark font-semibold">Manila</p>
+                    </div>
+
+                    <img id="weatherimg-el" src="assets/images/img-sun.svg" alt="Image Sun" class="w-[140px] h-[140px]">
+
+                    <span class="w-full h-[70px] flex justify-center items-center">
+                        <p id="celcius-el" class="text-dark text-[60px] font-bold">24°</p>
+                    </span>
+
+                    <div class="w-full h-[40px] flex justify-center items-center">
+                        <p id="description-el" class="text-dark text-[18px] font-normal">Sun is up, go touch some grass.</p>
+                    </div>
+
+                    <button id="btnrefresh-el" class="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-dark cursor-pointer active:scale-90 transform duration-150 ease-in-out">
+                        <img src="assets/icons/icon-refresh.svg" alt="Button Refresh" class="w-[14px] h-[14px]">
+                    </button>
+                </div>
+            </main>
+
+            <footer class="w-full h-[90px] flex flex-row justify-between items-center py-[12px] px-[12px] rounded-[18px] bg-dark">
+                <div class="w-[50px] h-full flex flex-col justify-center items-center gap-[2px]">
+                    <img src="assets/images/img-wind.svg" src="Wind Icon" class="w-[32px] h-[32px]">
+                    <p id="wind-el" class="text-white text-[12px] font-normal">13km/h</p>
+                    <p class="text-white text-[10px] font-medium">Wind</p>
+                </div>
+
+                <div class="w-[50px] h-full flex flex-col justify-center items-center gap-[2px]">
+                    <img src="assets/images/img-waterdrop.svg" src="Waterdrop Icon" class="w-[32px] h-[32px]">
+                    <p id="humidity-el" class="text-white text-[12px] font-normal">16%</p>
+                    <p class="text-white text-[10px] font-medium">Humidity</p>
+                </div>
+                
+                <div class="w-[50px] h-full flex flex-col justify-center items-center gap-[2px]">
+                    <img src="assets/images/img-umbrella.svg" src="Umbrella Icon" class="w-[32px] h-[32px]">
+                    <p id="rain-el" class="text-white text-[12px] font-normal">10%</p>
+                    <p class="text-white text-[10px] font-medium">Rain</p>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
