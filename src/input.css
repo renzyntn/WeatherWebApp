@@ -1,1 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    
+    --font-instrument-sans: "Instrument Sans", "Arial";
+
+    --color-dark: #2D2D30;
+    --color-font-dark: #1E1E1E;
+
+    --color-white: #F0F0F0;
+    --color-font-white: #F0F0F0;
+}
