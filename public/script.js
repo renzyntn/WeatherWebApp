@@ -97,7 +97,6 @@ function displayWeatherInfo(data, searchedVal) {
 searchBtn.addEventListener("click", () => {
     if (inputEl.value !== "") {
         getWeatherData();
-        inputEl.value = '';
     } else {
         inputEl.setAttribute("required", "true");
         inputEl.reportValidity();
@@ -108,7 +107,6 @@ inputEl.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         if (inputEl.value !== "") {
             getWeatherData();
-            inputEl.value = '';
         } else {
             inputEl.setAttribute("required", "true");
             inputEl.reportValidity();
