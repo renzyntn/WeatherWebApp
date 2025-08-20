@@ -171,17 +171,8 @@
   }
 }
 @layer utilities {
-  .invisible {
-    visibility: hidden;
-  }
-  .z-50 {
-    z-index: 50;
-  }
   .mx-\[24px\] {
     margin-inline: 24px;
-  }
-  .block {
-    display: block;
   }
   .flex {
     display: flex;
@@ -195,14 +186,26 @@
   .h-\[14px\] {
     height: 14px;
   }
+  .h-\[16px\] {
+    height: 16px;
+  }
   .h-\[24px\] {
     height: 24px;
+  }
+  .h-\[26px\] {
+    height: 26px;
   }
   .h-\[30px\] {
     height: 30px;
   }
   .h-\[32px\] {
     height: 32px;
+  }
+  .h-\[34px\] {
+    height: 34px;
+  }
+  .h-\[36px\] {
+    height: 36px;
   }
   .h-\[40px\] {
     height: 40px;
@@ -222,9 +225,6 @@
   .h-\[600px\] {
     height: 600px;
   }
-  .h-auto {
-    height: auto;
-  }
   .h-full {
     height: 100%;
   }
@@ -234,8 +234,14 @@
   .w-\[14px\] {
     width: 14px;
   }
+  .w-\[16px\] {
+    width: 16px;
+  }
   .w-\[24px\] {
     width: 24px;
+  }
+  .w-\[26px\] {
+    width: 26px;
   }
   .w-\[32px\] {
     width: 32px;
@@ -249,20 +255,11 @@
   .w-\[140px\] {
     width: 140px;
   }
-  .w-\[175px\] {
-    width: 175px;
-  }
   .w-\[220px\] {
     width: 220px;
   }
   .w-\[350px\] {
     width: 350px;
-  }
-  .w-auto {
-    width: auto;
-  }
-  .w-fit {
-    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -294,9 +291,6 @@
   .justify-center {
     justify-content: center;
   }
-  .justify-evenly {
-    justify-content: space-evenly;
-  }
   .gap-\[2px\] {
     gap: 2px;
   }
@@ -312,11 +306,11 @@
   .gap-\[18px\] {
     gap: 18px;
   }
-  .gap-\[24px\] {
-    gap: 24px;
+  .rounded-\[12px\] {
+    border-radius: 12px;
   }
-  .overflow-visible {
-    overflow: visible;
+  .rounded-\[14px\] {
+    border-radius: 14px;
   }
   .rounded-\[18px\] {
     border-radius: 18px;
