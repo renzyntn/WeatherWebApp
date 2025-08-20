@@ -32,8 +32,13 @@ async function getWeatherData() {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchedVal}&APPID=${apiKey}&units=metric`);
         if (!response.ok) {
             defaultTextEl.textContent = "City/State not found, please try again.";
+
             defaultStateEl.classList.remove('hidden');
             weatherSectionEl.classList.add('hidden');
+            
+            windEl.classList.add('hidden');
+            humidEl.classList.add('hidden');
+            pressureEl.classList.add('hidden');
 
             throw new Error("There was an error fetching the API");
         }
@@ -48,10 +53,14 @@ function displayWeatherInfo(data, searchedVal) {
     defaultStateEl.classList.add('hidden');
     weatherSectionEl.classList.remove('hidden');
     weatherSectionEl.classList.add('flex');
+
+    windEl.classList.remove('hidden');
+    humidEl.classList.remove('hidden');
+    pressureEl.classList.remove('hidden');
     
     const {main: {temp, humidity, pressure}, weather: [{main}], wind: {speed}} = data;
 
-    locationEl.innerHTML = searchedVal.charAt(0).toUpperCase() + searchedVal.slice(1).toLowerCase();
+    locationEl.innerHTML = searchedVal.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '); 
     celciusEl.innerHTML = `${Math.round(temp)}°`;
     windEl.innerHTML = `${Math.round(speed)}km/h`;
     humidEl.innerHTML = `${humidity}%`;
